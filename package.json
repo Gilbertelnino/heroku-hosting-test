@@ -1,0 +1,26 @@
+{
+  "name": "heroku-hosting-test",
+  "version": "1.0.0",
+  "description": "this is for testing heroku hosting using es6 syntac",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gilbertelnino/heroku-hosting-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gilbertelnino/heroku-hosting-test/issues"
+  },
+  "homepage": "https://github.com/Gilbertelnino/heroku-hosting-test#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  }
+}
