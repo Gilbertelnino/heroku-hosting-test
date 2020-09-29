@@ -4,8 +4,11 @@
   "description": "this is for testing heroku hosting using es6 syntac",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,10 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5"
   }
 }
